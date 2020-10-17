@@ -1,0 +1,23 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "Project to test Cypress features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maclor/cypress-training.git"
+  },
+  "author": "Maciej Lorenc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maclor/cypress-training/issues"
+  },
+  "homepage": "https://github.com/maclor/cypress-training#readme",
+  "dependencies": {
+    "cypress": "^5.4.0",
+    "prettier": "^2.1.2"
+  }
+}
