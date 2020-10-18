@@ -39,6 +39,12 @@ describe('Second test with web - check book price', () => {
         cy.log('How to log something on console?')
     })
 
+    it('Reload the browser', () => {
+        cy.log('Before page reload')
+        cy.reload()
+        cy.log('After page reload')
+    })
+
     it('Click `fantasy` category', () => {
         cy.get('a').contains('Fantasy').click()
     })
