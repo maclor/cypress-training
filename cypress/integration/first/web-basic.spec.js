@@ -36,6 +36,7 @@ describe('Second test with web - check book price', () => {
     it('Should open url', () => {
         cy.visit('http://books.toscrape.com/', {timeout: 10000})
         cy.url().should('include', 'toscrape')
+        cy.title().should('include', 'Books to Scrape - Sandbox')
         cy.log('How to log something on console?')
     })
 
