@@ -95,6 +95,12 @@ describe('Third test with web - log into the account with invalid credentials', 
 })
 
 describe('Fourth test with web - log into the account with valid credentials and clear session', () => {
+        it('Override time', () => {
+            const date = new  Date(2022, 10, 10).getTime()
+            cy.clock(date)
+            cy.log(date)
+        })
+
         it('Should open url', () => {
             cy.visit('http://zero.webappsecurity.com/login.html')
             cy.url().should('include', 'login')
