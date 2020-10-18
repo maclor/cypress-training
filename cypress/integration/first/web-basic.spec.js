@@ -66,13 +66,15 @@ describe('Third test with web - log into the account with invalid credentials', 
     })
 
     it('Enter login', () => {
-        cy.get('#user_login').clear()
-        cy.get('#user_login').type('invalid-login')
+        cy.get('#user_login').as('username')
+        cy.get('@username').clear()
+        cy.get('@username').type('invalid-login')
     })
 
     it('Enter password', () => {
-        cy.get('#user_password').clear().type('invalid-password')
-        cy.get('#user_password').type('invalid-password', {delay: 100}) // delay entering next chars, usefull for autocomplete
+        cy.get('#user_password').as('password')
+        cy.get('@password').clear()
+        cy.get('@password').type('invalid-password', {delay: 100}) // delay entering next chars, usefull for autocomplete
     })
 
     it('Mark `keep me signed in` checkbox', () => {
@@ -85,8 +87,49 @@ describe('Third test with web - log into the account with invalid credentials', 
     })
 
     it('Should display error message', () => {
-        cy.get('.alert-error').should('be.visible')
-        cy.get('.alert-error').should('contain.text', 'Login and/or password are wrong.')
+        cy.get('.alert-error')
+            .should('be.visible')
+            .and('contain.text', 'Login and/or password are wrong.')
     })
+    
+})
 
+describe('Fourth test with web - log into the account with valid credentials and clear session', () => {
+        it('Should open url', () => {
+            cy.visit('http://zero.webappsecurity.com/login.html')
+            cy.url().should('include', 'login')
+        })
+    
+        it('Enter login', () => {
+            cy.get('#user_login').as('username')
+            cy.get('@username').clear()
+            cy.get('@username').type('username')
+        })
+    
+        it('Enter password', () => {
+            cy.get('#user_password').as('password')
+            cy.get('@password').clear()
+            cy.get('@password').type('password')
+        })
+    
+        it('Submit login form', () => {
+            cy.get('.btn-primary').click()
+        })
+
+        it('Should be logged in', () => {
+            cy.get('h2').should('contain.text', 'Cash Accounts')
+            cy.get('h2').should('contain.text', 'Investment Accounts')
+        })
+
+        it('Clear cookies and local storage and reload', () => {
+            cy.clearCookies({ log: true})
+            cy.clearLocalStorage({ log: true})
+            cy.reload()
+        })
+
+        it('Should be on login page again', () => {
+            cy.url().should('include', 'login')
+            cy.get('#user_login').should('be.visible')
+            cy.get('#user_password').should('be.visible')
+        })
 })
