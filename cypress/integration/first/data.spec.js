@@ -14,4 +14,10 @@ describe('Write and read data - json file', () => {
     it('Read data from txt', () => {
         cy.readFile('log.txt').should('eq', 'Maciej Lorenc')
     })
+
+    it('Should read and verify doc content', () => {
+        cy.visit('http://zero.webappsecurity.com/')
+        cy.document().its('contentType').should('eq', 'text/html')
+        cy.document().should('have.property', 'charset').and('eq', 'UTF-8')
+    })
 })
