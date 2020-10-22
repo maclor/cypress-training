@@ -16,6 +16,27 @@ class HomePage extends BasePage {
 
 
 describe('Little abstraction with classes', () => {
+
+    before(function () {
+        // runs at the begining of tests
+        cy.log('before called')
+    })
+
+    beforeEach(function () {
+        // runs before each it
+        cy.log('before each called')
+    })
+
+    afterEach(function () {
+        // runs after each it
+        cy.log('after each called')
+    })
+
+    after(function() {
+        // runs after all tests
+        cy.log('after called')
+    })
+
     it('Should open url', () => {
         HomePage.loadPage()
     })
