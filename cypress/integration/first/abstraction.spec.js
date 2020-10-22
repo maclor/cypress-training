@@ -37,7 +37,7 @@ describe('Little abstraction with classes', () => {
         cy.log('after called')
     })
 
-    it('Should open url', () => {
+    it.only('Should open url', () => {
         HomePage.loadPage()
     })
 
@@ -46,6 +46,14 @@ describe('Little abstraction with classes', () => {
     })
 
     it('Scroll page up', () => {
+        HomePage.scrollTop()
+    })
+
+    it('Scroll page down', () => {
+        HomePage.scrollBottom()
+    })
+
+    it.skip('Scroll page up', () => {
         HomePage.scrollTop()
     })
     
