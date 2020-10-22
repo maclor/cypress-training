@@ -19,6 +19,7 @@
   "homepage": "https://github.com/maclor/cypress-training#readme",
   "dependencies": {
     "cypress": "^5.4.0",
+    "cypress-xpath": "^1.6.0",
     "prettier": "^2.1.2"
   }
 }
