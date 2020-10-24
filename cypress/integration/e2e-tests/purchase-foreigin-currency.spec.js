@@ -1,4 +1,4 @@
-describe('Calculate purchasing foreign currency cash costs', () => {
+describe('Exchange foreign currency', () => {
     before(() => {
         cy.visit('login.html')
         cy.fixture('user').then( user => {
@@ -20,5 +20,13 @@ describe('Calculate purchasing foreign currency cash costs', () => {
 
     it('Calculations should be done properly', () => {
         cy.get('#pc_conversion_amount').should('be.visible').and('contain.text', '= 150.00 U.S. dollar (USD)')
+    })
+
+    it('Click purchase', () => {
+        cy.get('#purchase_cash').click()
+    })
+
+    it('Purchase should be done', () => {
+        cy.get('#alert_content').should('be.visible').and('contain.text', 'The payment was successfully submitted.')
     })
 })
