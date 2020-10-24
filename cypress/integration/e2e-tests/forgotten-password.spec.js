@@ -1,6 +1,6 @@
 describe('Passowr reminder test', () => {
     before(() => {
-        cy.visit('http://zero.webappsecurity.com/index.html')
+        cy.visit('index.html')
     })
 
     it('Click Sign in button', () => {

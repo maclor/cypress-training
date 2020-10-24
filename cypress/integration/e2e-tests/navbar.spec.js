@@ -1,6 +1,6 @@
 describe('Check if navar works properly', () => {
     before(() => {
-        cy.visit('http://zero.webappsecurity.com/index.html')
+        cy.visit('index.html')
     })
     
     it('Should display online babnking content', () => {
