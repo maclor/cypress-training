@@ -5,9 +5,7 @@ describe('Login and logout test', () => {
     })
 
     it('Try to login with invalid data', () => {
-        cy.get('#user_login').type('invalid-username')
-        cy.get('#user_password').type('invalid-password')
-        cy.get('.btn-primary').click()
+        cy.login('invalid-username', 'invalid-password')
     })
 
     it('Should display error message', () => {
@@ -21,9 +19,7 @@ describe('Login and logout test', () => {
             const username = user.username
             const password = user.password
 
-            cy.get('#user_login').type(username)
-            cy.get('#user_password').type(password)
-            cy.get('.btn-primary').click()
+            cy.login(username, password)
         })
     })
 
