@@ -1,9 +1,0 @@
-{
-    "viewportWidth": 1280,
-    "viewportHeight": 720,
-    "waitForAnimations": true,
-    "defaultCommandTimeout": 5000,
-    "execTimeout": 60000,
-    "video": false,
-    "failOnStatusCode": false
-}
