@@ -8,6 +8,7 @@ Feature: Login to the bank
     When I submit login
     Then I am logged into the bank
 
+  @focus
   Scenario: Invalid Login
     And I fill password with "passwordaaaaaaa"
     When I submit login
