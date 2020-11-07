@@ -20,3 +20,7 @@ When('I submit login', () => {
 Then('I am logged into the bank', () => {
     cy.get('#account_summary_tab').should('be.visible')
 })
+
+Then('I am on the login page with error message', () => {
+    LoginPage.getErrorMessage().should('be.visible')
+})
