@@ -5,9 +5,15 @@ Given('I am on login page', () => {
     LoginPage.open()
 })
 
+When('I fill username with {string}', (username) => {
+    LoginPage.enterUsername(username)
+})
+
+When('I fill password with {string}', (password) => {
+    LoginPage.enterPassword(password)
+})
+
 When('I submit login', () => {
-    LoginPage.enterUsername('username')
-    LoginPage.enterPassword('password')
     LoginPage.clickLogin()
 })
 
