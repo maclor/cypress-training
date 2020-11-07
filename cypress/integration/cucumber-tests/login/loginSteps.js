@@ -5,7 +5,6 @@ Given('I am on login page', () => {
 })
 
 When('I submit login', () => {
-    cy.visit('http://zero.webappsecurity.com/')
     cy.get('#signin_button').click()
     cy.get('#user_login').type('username')
     cy.get('#user_password').type('password')
