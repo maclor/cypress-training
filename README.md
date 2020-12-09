@@ -5,3 +5,4 @@ Project to test Cypress features using [Udemy course](https://www.udemy.com/cour
 - e2e-no-bdd - very simple e2e setup, no gherkin, no PO, some commands
 - visual-regression - how to do visual regression with cypress, how to integrate with percy
 - e2e-bdd
+- dashboard - simple dashboard/ci/cd solution
