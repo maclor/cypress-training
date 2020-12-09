@@ -1,0 +1,26 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "Project to test Cypress features using [Udemy course](https://www.udemy.com/course/automated-testing-with-cypress/).\r ## Branches\r - basics - test various functions, learn how to deal with cypress fundamentals\r - e2e-no-bdd - very simple e2e setup, no gherkin, no PO, some commands\r - visual-regression - how to do visual regression with cypress, how to integrate with percy\r - e2e-bdd\r - dashboard - simple dashboard/ci/cd solution",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^5.6.0",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "prettier": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maclor/cypress-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maclor/cypress-training/issues"
+  },
+  "homepage": "https://github.com/maclor/cypress-training#readme"
+}
