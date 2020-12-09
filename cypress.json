@@ -1,0 +1,16 @@
+{
+  "watchForFilesChanges": false,
+  "chromeWebSecurity": false,
+  "viewportWidth": 1000,
+  "viewposrtHeight": 800,
+  "waitForAnimation": true,
+  "animationDistanceTreshold": 20,
+  "defaultCommandTimeout": 6000,
+  "execTimeout": 60000,
+  "pageLoadTimeout": 20000,
+  "requestTimeout": 15000,
+  "responseTimeout": 15000,
+  "video": false,
+  "filOnStatusCode": false,
+  "projectId": "65ygt1"
+}
