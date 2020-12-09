@@ -6,3 +6,4 @@ Project to test Cypress features using [Udemy course](https://www.udemy.com/cour
 - visual-regression - how to do visual regression with cypress, how to integrate with percy
 - e2e-bdd
 - dashboard - simple dashboard/ci/cd solution
+- framework
