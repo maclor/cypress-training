@@ -11,7 +11,8 @@
   "devDependencies": {},
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:run-dashboard": "cypress run --record --key 839e6de8-d9a7-490f-bc91-638fdbb4d569"
   },
   "repository": {
     "type": "git",
